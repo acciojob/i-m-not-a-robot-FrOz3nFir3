@@ -17,11 +17,13 @@ async function loadImages() {
     let img = imgElements[i];
     img.addEventListener("click", handleClick);
 
-    // adding same classes
+    // adding same classes and attributes
     if (i == imgElements.length - 1) {
       img.classList.add(`img${currentIndex + 1}`);
+      img.setAttribute("data-ns-test", `img${currentIndex + 1}`);
     } else {
       img.classList.add(`img${i + 1}`);
+      img.setAttribute("data-ns-test", `img${i + 1}`);
     }
 
     let imgLink = images[i] || images[currentIndex];
